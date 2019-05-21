@@ -19,6 +19,7 @@ data/
 pm25-data-analysis_cache/
 packrat/lib*/
 .Rproj.user
+rsconnect/
 
 # +--------------------------------------------------+
 # | R                                                |
