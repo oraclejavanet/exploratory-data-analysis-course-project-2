@@ -24,6 +24,10 @@ rsconnect/
 # TODO file
 TODO.txt
 
+# README
+README.html
+README.nb.html
+
 # History files
 .Rhistory
 .Rapp.history
