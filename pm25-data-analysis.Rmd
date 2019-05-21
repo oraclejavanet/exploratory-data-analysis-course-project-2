@@ -9,10 +9,6 @@ output:
     theme: cosmo
     keep_md: no
     df_print: paged
-  word_document:
-    toc: yes
-    df_print: paged
-    keep_md: no
   pdf_document:
     toc: yes
     df_print: kable
@@ -20,11 +16,11 @@ output:
     fig_caption: yes
     highlight: tango
     dev: pdf
+  word_document:
+    toc: yes
+    df_print: paged
+    keep_md: no
 ---
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.path='figures/')
-```
 
 ## Course Project
 
@@ -63,28 +59,42 @@ provided in the [Questions](#questions) section of this report.
 
 ## Environment Setup
 
-Load packages used in this analysis
+```{r setup, include = FALSE}
+# set knitr options
+knitr::opts_chunk$set(echo = TRUE, fig.path='figures/')
+
+# clear global workspace (including hidden objects) for this session
+rm(list = ls(all.names = TRUE))
+
+# free up memory and display statistics on free memory
+gc()
+
+# disable scientific notation for numbers
+options(scipen = 1)
+```
+
+Load packages used in this analysis.
 
 ```{r load-packages, echo = TRUE}
 if (!require(ggplot2)) {
-    install.packages("ggplot2", repos = "http://cran.us.r-project.org")
+    install.packages("ggplot2")
     library(ggplot2, warn.conflicts = FALSE)
 }
 if (!require(dplyr)) {
-    install.packages("dplyr", repos = "http://cran.us.r-project.org")
+    install.packages("dplyr")
     library(dplyr, warn.conflicts = FALSE)
 }
 if (!require(scales)) {
-    install.packages("scales", repos = "http://cran.us.r-project.org")
+    install.packages("scales")
     library(scales, warn.conflicts = FALSE)
 }
 if (!require(stringi)) {
-    install.packages("stringi", repos = "http://cran.us.r-project.org")
+    install.packages("stringi")
     library(stringi, warn.conflicts = FALSE)
 }
 ```
 
-Session information
+Display session information.
 
 ```{r display-session-info, echo = TRUE}
 sessionInfo()
@@ -98,7 +108,7 @@ function. Prior to processing the data, validate the downloaded data file and
 loaded dataset by checking the file size and dimensions respectively.
 
 ```{r load-data, echo = TRUE, cache = TRUE}
-setwd("~jhunter/repos/coursera/data-science-specialization/exploratory-data-analysis-course-project-2")
+setwd("~/repos/coursera/github-assignments/exploratory-data-analysis-course-project-2")
 extNeiDataFileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
 extNeiDataFile <- "data/exdata_data_NEI_data.zip"
 neiDataFile <- "data/summarySCC_PM25.rds"

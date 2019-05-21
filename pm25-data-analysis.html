@@ -2832,7 +2832,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Analysis of PM2.5 in the U.S. and its Impact on Public Health</h1>
 <h4 class="author">Jeffrey Hunter</h4>
-<h4 class="date">18 May, 2019</h4>
+<h4 class="date">20 May, 2019</h4>
 
 </div>
 
@@ -2858,41 +2858,47 @@ div.tocify {
 </div>
 <div id="environment-setup" class="section level2">
 <h2>Environment Setup</h2>
-<p>Load packages used in this analysis</p>
+<p>Load packages used in this analysis.</p>
 <pre class="r"><code>if (!require(ggplot2)) {
-    install.packages(&quot;ggplot2&quot;, repos = &quot;http://cran.us.r-project.org&quot;)
+    install.packages(&quot;ggplot2&quot;)
     library(ggplot2, warn.conflicts = FALSE)
 }</code></pre>
 <pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called 'ggplot2'</code></pre>
+<pre><code>## Installing package into '/Users/jhunter/repos/coursera/github-assignments/exploratory-data-analysis-course-project-2/packrat/lib/x86_64-apple-darwin15.6.0/3.6.0'
+## (as 'lib' is unspecified)</code></pre>
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/2z/z7087ckn7tg2y49dvqr_l4j40000gn/T//RtmpTaa1YC/downloaded_packages</code></pre>
 <pre><code>## Registered S3 methods overwritten by 'ggplot2':
 ##   method         from 
 ##   [.quosures     rlang
 ##   c.quosures     rlang
 ##   print.quosures rlang</code></pre>
 <pre class="r"><code>if (!require(dplyr)) {
-    install.packages(&quot;dplyr&quot;, repos = &quot;http://cran.us.r-project.org&quot;)
+    install.packages(&quot;dplyr&quot;)
     library(dplyr, warn.conflicts = FALSE)
 }</code></pre>
 <pre><code>## Loading required package: dplyr</code></pre>
+<pre><code>## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+## logical.return = TRUE, : there is no package called 'dplyr'</code></pre>
+<pre><code>## Installing package into '/Users/jhunter/repos/coursera/github-assignments/exploratory-data-analysis-course-project-2/packrat/lib/x86_64-apple-darwin15.6.0/3.6.0'
+## (as 'lib' is unspecified)</code></pre>
 <pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+## The downloaded binary packages are in
+##  /var/folders/2z/z7087ckn7tg2y49dvqr_l4j40000gn/T//RtmpTaa1YC/downloaded_packages</code></pre>
 <pre class="r"><code>if (!require(scales)) {
-    install.packages(&quot;scales&quot;, repos = &quot;http://cran.us.r-project.org&quot;)
+    install.packages(&quot;scales&quot;)
     library(scales, warn.conflicts = FALSE)
 }</code></pre>
 <pre><code>## Loading required package: scales</code></pre>
 <pre class="r"><code>if (!require(stringi)) {
-    install.packages(&quot;stringi&quot;, repos = &quot;http://cran.us.r-project.org&quot;)
+    install.packages(&quot;stringi&quot;)
     library(stringi, warn.conflicts = FALSE)
 }</code></pre>
 <pre><code>## Loading required package: stringi</code></pre>
-<p>Session information</p>
+<p>Display session information.</p>
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>## R version 3.6.0 (2019-04-26)
 ## Platform: x86_64-apple-darwin15.6.0 (64-bit)
@@ -2924,7 +2930,7 @@ div.tocify {
 <div id="load-data" class="section level2">
 <h2>Load Data</h2>
 <p>Download the compressed data file from the source URL (if not found locally), uncompress it and then load the two serialized R objects via the <code>readRDS</code> function. Prior to processing the data, validate the downloaded data file and loaded dataset by checking the file size and dimensions respectively.</p>
-<pre class="r"><code>setwd(&quot;~jhunter/repos/coursera/data-science-specialization/exploratory-data-analysis-course-project-2&quot;)
+<pre class="r"><code>setwd(&quot;~/repos/coursera/github-assignments/exploratory-data-analysis-course-project-2&quot;)
 extNeiDataFileURL &lt;- &quot;https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip&quot;
 extNeiDataFile &lt;- &quot;data/exdata_data_NEI_data.zip&quot;
 neiDataFile &lt;- &quot;data/summarySCC_PM25.rds&quot;

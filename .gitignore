@@ -3,3 +3,6 @@
 # +--------------------------------------------------+
 
 data/
+pm25-data-analysis_cache/
+.Rproj.user
+packrat/lib*/
