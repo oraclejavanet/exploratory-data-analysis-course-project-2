@@ -2,13 +2,17 @@
 
 **Jeffrey M. Hunter**
 
-May 18, 2019
+May 20, 2019
 
-## Course Project
+## Project
 
-Peer-graded Assignment
+Peer-graded Assignment: Course Project 2
 
-The analysis report for this project is available on RPubs:
+**Analysis report available on RPubs**
 
-<a href="http://rpubs.com/OracleJavaNet/498011">Analysis of PM2.5 in the United States and its Impact on Public Health</a>
+* <a href="http://rpubs.com/OracleJavaNet/498011">Analysis of PM2.5 in the United States and its Impact on Public Health</a>
+
+**Analysis report available on GitHub**
+
+* <a href="http://htmlpreview.github.io/?https://github.com/oraclejavanet/exploratory-data-analysis-course-project-2/blob/master/pm25-data-analysis.html" target="_blank">Analysis of PM2.5 in the United States and its Impact on Public Health</a>
 
