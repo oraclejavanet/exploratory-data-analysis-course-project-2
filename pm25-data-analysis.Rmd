@@ -108,7 +108,7 @@ function. Prior to processing the data, validate the downloaded data file and
 loaded dataset by checking the file size and dimensions respectively.
 
 ```{r load-data, echo = TRUE, cache = TRUE}
-setwd("~/repos/coursera/github-assignments/exploratory-data-analysis-course-project-2")
+setwd("~/repos/coursera/data-science-specialization-github-assignments/exploratory-data-analysis-course-project-2")
 extNeiDataFileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
 extNeiDataFile <- "data/exdata_data_NEI_data.zip"
 neiDataFile <- "data/summarySCC_PM25.rds"
